@@ -12,7 +12,7 @@ try:
     # Citim cheia din sistemul de secrete al Streamlit
     api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
     api_configured = True
 except Exception:
     st.error("⚠️ Eroare: Cheia API nu a fost găsită în 'Streamlit Secrets'.")
